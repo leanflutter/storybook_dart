@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "build-preview-app": "cd preview_app && flutter_distributor release --name prod && cd ../ && mv preview_app/build/web public/preview_app",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
