@@ -9,6 +9,8 @@
 
 Storybook for Flutter, build your Flutter widget storybook using [storybookjs](https://storybook.js.org/).
 
+![](https://github.com/leanflutter/storybook_dart/blob/main/screenshots/storybook-dart-example.png?raw=true)
+
 > See [storybook-dart-example](https://storybook-dart-example.leanflutter.dev) for a live demo.
 
 ---

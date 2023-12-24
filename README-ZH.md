@@ -9,6 +9,8 @@
 
 Storybook for Flutter，使用 [storybookjs](https://storybook.js.org/) 构建您的 Flutter widget storybook。
 
+![](https://github.com/leanflutter/storybook_dart/blob/main/screenshots/storybook-dart-example.png?raw=true)
+
 > 查看 [storybook-dart-example](https://storybook-dart-example.leanflutter.dev) 以查看实时演示。
 
 ---
