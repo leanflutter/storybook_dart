@@ -21,3 +21,15 @@ class CupertinoButtonMeta extends Meta with _$CupertinoButtonMeta {
 @storybook.Story('Default')
 class CupertinoButtonDefaultStory extends StoryObj<CupertinoButtonMeta>
     with _$CupertinoButtonDefaultStory {}
+
+@storybook.Story('Filled')
+class CupertinoButtonfilledStory extends StoryObj<CupertinoButtonMeta>
+    with _$CupertinoButtonfilledStory {
+  @override
+  Widget build(BuildContext context, List<Arg> args) {
+    return CupertinoButton.filled(
+      child: const Text('Button'),
+      onPressed: () {},
+    );
+  }
+}

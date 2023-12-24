@@ -8,6 +8,7 @@ final StorybookConfig storybookConfig = StorybookConfig(
   stories: [
     BadgeDefaultStory(),
     CupertinoButtonDefaultStory(),
+    CupertinoButtonfilledStory(),
     CircleAvatarDefaultStory(),
   ],
 );

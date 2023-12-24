@@ -25,3 +25,11 @@ mixin _$CupertinoButtonDefaultStory on StoryObj<CupertinoButtonMeta> {
   @override
   CupertinoButtonMeta get meta => CupertinoButtonMeta();
 }
+
+mixin _$CupertinoButtonfilledStory on StoryObj<CupertinoButtonMeta> {
+  @override
+  String get name => 'Filled';
+
+  @override
+  CupertinoButtonMeta get meta => CupertinoButtonMeta();
+}
