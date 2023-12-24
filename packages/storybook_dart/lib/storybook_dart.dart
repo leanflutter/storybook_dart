@@ -8,3 +8,4 @@ export 'src/meta.dart';
 export 'src/story_obj.dart';
 export 'src/storybook.dart';
 export 'src/storybook_config.dart';
+export 'src/widgets/storybook_previewer.dart';

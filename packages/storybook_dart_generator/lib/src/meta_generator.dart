@@ -12,7 +12,7 @@ class ReactMetaGenerator {
   const ReactMetaGenerator();
 
   File _getOutputComponent(MetaInfo meta) {
-    final directory = Directory('../../storybook/src/stories');
+    final directory = Directory('../src/stories');
     if (!directory.existsSync()) {
       directory.createSync(recursive: true);
     }
@@ -37,7 +37,7 @@ export const ${meta.widget} = (props: ${meta.widget}Props) => {
   }
 
   File _getOutputComponentStories(MetaInfo meta) {
-    final directory = Directory('../../storybook/src/stories');
+    final directory = Directory('../src/stories');
     if (!directory.existsSync()) {
       directory.createSync(recursive: true);
     }

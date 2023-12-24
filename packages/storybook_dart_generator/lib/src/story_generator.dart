@@ -12,7 +12,7 @@ class ReactStoryGenerator {
   const ReactStoryGenerator();
 
   File _getOutput(StoryInfo story) {
-    final directory = Directory('../../storybook/src/stories');
+    final directory = Directory('../src/stories');
     if (!directory.existsSync()) {
       directory.createSync(recursive: true);
     }

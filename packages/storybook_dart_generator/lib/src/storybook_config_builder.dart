@@ -41,7 +41,7 @@ class StorybookConfigBuilder extends Builder {
 
     final outputId = AssetId(
       buildStep.inputId.package,
-      'lib/.storybook/config.g.dart',
+      'lib/storybook_config.g.dart',
     );
 
     final contents = '''
@@ -63,7 +63,7 @@ ${_buildStories(stories)}
   @override
   Map<String, List<String>> get buildExtensions {
     return {
-      'lib/\$lib\$': ['lib/.storybook/config.g.dart']
+      'lib/\$lib\$': ['lib/storybook_config.g.dart']
     };
   }
 }
