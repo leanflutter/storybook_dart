@@ -7,16 +7,21 @@ class StorybookPreviewer extends StatelessWidget {
 
   StorybookConfig get config => throw UnimplementedError();
 
-  List<StoryObj> get stories => config.stories;
+  ThemeData get theme {
+    return ThemeData(
+      colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      useMaterial3: true,
+    );
+  }
 
   Widget _buildHomePage(BuildContext context) {
     final storyId = Uri.base.queryParameters['id'];
-    final story = stories.firstWhereOrNull((e) => e.id == storyId);
+    final story = config.stories.firstWhereOrNull((e) => e.id == storyId);
 
     if (storyId == null) {
       return Scaffold(
         body: ListView(
-          children: stories.map((story) {
+          children: config.stories.map((story) {
             return ListTile(
               title: Text(story.meta.title),
               subtitle: SelectableText(story.id),
@@ -44,10 +49,7 @@ class StorybookPreviewer extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'StorybookPreviewer',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: theme,
       home: _buildHomePage(context),
     );
   }
