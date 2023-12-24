@@ -7,7 +7,9 @@
 [discord-image]: https://img.shields.io/discord/884679008049037342.svg
 [discord-url]: https://discord.gg/zPa6EZ2jqb
 
-Storybook for Flutter，使用 [storybookjs](https://storybook.js.org/) 构建您的 widget storybook。
+Storybook for Flutter，使用 [storybookjs](https://storybook.js.org/) 构建您的 Flutter widget storybook。
+
+> 查看 [storybook-dart-example](https://storybook-dart-example.leanflutter.dev) 以查看实时演示。
 
 ---
 

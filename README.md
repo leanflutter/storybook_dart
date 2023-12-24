@@ -7,7 +7,9 @@
 [discord-image]: https://img.shields.io/discord/884679008049037342.svg
 [discord-url]: https://discord.gg/zPa6EZ2jqb
 
-Storybook for Flutter, build your widget storybook using [storybookjs](https://storybook.js.org/).
+Storybook for Flutter, build your Flutter widget storybook using [storybookjs](https://storybook.js.org/).
+
+> See [storybook-dart-example](https://storybook-dart-example.leanflutter.dev) for a live demo.
 
 ---
 
