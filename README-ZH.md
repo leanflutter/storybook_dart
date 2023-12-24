@@ -7,11 +7,11 @@
 [discord-image]: https://img.shields.io/discord/884679008049037342.svg
 [discord-url]: https://discord.gg/zPa6EZ2jqb
 
-Storybook for Flutter, build your widget storybook using [storybookjs](https://storybook.js.org/).
+Storybook for Flutter，使用 [storybookjs](https://storybook.js.org/) 构建您的 widget storybook。
 
 ---
 
-English | [简体中文](./README-ZH.md)
+[English](./README.md) | 简体中文
 
 ---
 
