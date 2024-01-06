@@ -24,14 +24,16 @@ class ReactStoryGenerator {
     final storyName = story.name.replaceAll(' ', '_');
 
     final contents = output.readAsStringSync();
-    output.writeAsStringSync([
-      contents,
-      '''
+    output.writeAsStringSync(
+      [
+        contents,
+        '''
 export const $storyName: Story = {
   args: {},
 };
 '''
-    ].join('\n'));
+      ].join('\n'),
+    );
   }
 }
 
@@ -46,7 +48,7 @@ class StoryGenerator extends GeneratorForAnnotation<Story> {
   ) {
     final StoryInfo story = resolveStoryInfo(element, annotation);
     final MetaInfo meta = story.meta;
-    ReactStoryGenerator().generate(story);
+    const ReactStoryGenerator().generate(story);
 
     return '''
 mixin _\$${story.className} on StoryObj<${meta.className}> {

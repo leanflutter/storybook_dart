@@ -84,7 +84,7 @@ class MetaGenerator extends GeneratorForAnnotation<Meta> {
     BuildStep buildStep,
   ) {
     final meta = resolveMetaInfo(element, annotation);
-    ReactMetaGenerator().generate(meta);
+    const ReactMetaGenerator().generate(meta);
 
     return '''
  mixin _\$${meta.className} on Meta {
@@ -92,9 +92,11 @@ class MetaGenerator extends GeneratorForAnnotation<Meta> {
   String get title => '${meta.title}';
 
   @override
-  List<ArgType> get argTypes => [
-    ${meta.argTypes?.map((e) => 'ArgType(\'${e.name}\', defaultValue: ${e.defaultValue})').join(',\n')}
-  ];
+  List<ArgType> get argTypes {
+    return [
+      ${meta.argTypes?.map((e) => 'const ArgType(\'${e.name}\', defaultValue: ${e.defaultValue})').join(',\n')}
+    ];
+  }
 }
 ''';
   }

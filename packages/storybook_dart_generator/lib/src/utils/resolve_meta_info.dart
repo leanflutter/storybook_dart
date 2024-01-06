@@ -11,10 +11,12 @@ MetaInfo resolveMetaInfo(Element element, ConstantReader annotation) {
     argTypes: annotation
         .read('argTypes')
         .listValue
-        .map((e) => ArgType(
-              e.getField('name')!.toStringValue()!,
-              defaultValue: e.getField('defaultValue')!.toSymbolValue(),
-            ))
+        .map(
+          (e) => ArgType(
+            e.getField('name')!.toStringValue()!,
+            defaultValue: e.getField('defaultValue')!.toSymbolValue(),
+          ),
+        )
         .toList(),
     className: className,
   );

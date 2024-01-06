@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:storybook_dart/storybook_dart.dart';
 
 class StorybookPreviewer extends StatelessWidget {
-  const StorybookPreviewer({Key? key}) : super(key: key);
+  const StorybookPreviewer({super.key});
 
   StorybookConfig get config => throw UnimplementedError();
 
@@ -36,7 +36,7 @@ class StorybookPreviewer extends StatelessWidget {
         child: Builder(
           builder: (context) {
             if (story == null) {
-              return Text('Not found');
+              return const Text('Not found');
             }
             return story.build(context, []);
           },

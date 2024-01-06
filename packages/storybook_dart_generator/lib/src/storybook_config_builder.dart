@@ -8,7 +8,7 @@ import 'package:storybook_dart_generator/src/story_info.dart';
 import 'package:storybook_dart_generator/src/utils/resolve_story_info.dart';
 
 class StorybookConfigBuilder extends Builder {
-  TypeChecker get typeChecker => TypeChecker.fromRuntime(Story);
+  TypeChecker get typeChecker => const TypeChecker.fromRuntime(Story);
 
   String _buildImports(List<StoryInfo> stories) {
     final Set<String> imports = {};
@@ -31,11 +31,13 @@ class StorybookConfigBuilder extends Builder {
     await for (final input in buildStep.findAssets(inputFiles)) {
       final library = LibraryReader(await buildStep.resolver.libraryFor(input));
       for (final annotatedElement in library.annotatedWith(typeChecker)) {
-        stories.add(resolveStoryInfo(
-          annotatedElement.element,
-          annotatedElement.annotation,
-          assetId: input,
-        ));
+        stories.add(
+          resolveStoryInfo(
+            annotatedElement.element,
+            annotatedElement.annotation,
+            assetId: input,
+          ),
+        );
       }
     }
 
@@ -44,26 +46,26 @@ class StorybookConfigBuilder extends Builder {
       'lib/storybook_config.g.dart',
     );
 
-    final contents = '''
-import 'package:storybook_dart/storybook_dart.dart';
+    final sortedStories = stories.toList()
+      ..sort((a, b) => a.assetId!.path.compareTo(b.assetId!.path));
 
-${_buildImports(stories)}
+    final contents = '''
+${_buildImports(sortedStories)}
+import 'package:storybook_dart/storybook_dart.dart';
 
 final StorybookConfig storybookConfig = StorybookConfig(
   stories: [
-${_buildStories(stories)}
+${_buildStories(sortedStories)}
   ],
 );
-
 ''';
-
     await buildStep.writeAsString(outputId, contents);
   }
 
   @override
   Map<String, List<String>> get buildExtensions {
     return {
-      'lib/\$lib\$': ['lib/storybook_config.g.dart']
+      'lib/\$lib\$': ['lib/storybook_config.g.dart'],
     };
   }
 }

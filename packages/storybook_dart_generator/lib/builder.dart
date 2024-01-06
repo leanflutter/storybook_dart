@@ -12,9 +12,9 @@ Builder storybookConfigBuilder(BuilderOptions options) {
 Builder storybookDartBuilder(BuilderOptions options) {
   return SharedPartBuilder(
     [
-      MetaGenerator(),
-      StoryGenerator(),
-      StorybookPreviewerGenerator(),
+      const MetaGenerator(),
+      const StoryGenerator(),
+      const StorybookPreviewerGenerator(),
     ],
     'storybook_dart_builder',
   );
