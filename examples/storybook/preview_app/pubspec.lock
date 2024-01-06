@@ -430,21 +430,21 @@ packages:
       path: "../../../packages/storybook_dart"
       relative: true
     source: path
-    version: "0.0.1"
+    version: "0.0.2"
   storybook_dart_annotation:
     dependency: "direct main"
     description:
       path: "../../../packages/storybook_dart_annotation"
       relative: true
     source: path
-    version: "0.0.1"
+    version: "0.0.2"
   storybook_dart_generator:
     dependency: "direct dev"
     description:
       path: "../../../packages/storybook_dart_generator"
       relative: true
     source: path
-    version: "0.0.1"
+    version: "0.0.2"
   stream_channel:
     dependency: transitive
     description:

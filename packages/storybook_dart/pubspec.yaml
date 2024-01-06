@@ -1,6 +1,6 @@
 name: storybook_dart
 description: storybook_dart
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/leanflutter/storybook_dart/tree/main/packages/storybook_dart
 
 environment:
