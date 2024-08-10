@@ -1,7 +1,6 @@
 import 'package:preview_app/storybook_config.g.dart';
+import 'package:storybook_dart/annotations.dart' as storybook;
 import 'package:storybook_dart/storybook_dart.dart';
-import 'package:storybook_dart_annotation/storybook_dart_annotation.dart'
-    as storybook;
 
 part 'storybook_preview_app.g.dart';
 

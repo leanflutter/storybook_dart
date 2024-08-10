@@ -1,6 +1,6 @@
 name: storybook_dart_generator
 description: storybook_dart_generator
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/leanflutter/storybook_dart/tree/main/packages/storybook_dart_generator
 
 environment:
@@ -24,4 +24,4 @@ dev_dependencies:
   build_runner: ^2.0.0
   flutter_test:
     sdk: flutter
-  mostly_reasonable_lints: ^0.1.1
+  mostly_reasonable_lints: ^0.1.2

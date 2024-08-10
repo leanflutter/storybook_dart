@@ -7,6 +7,7 @@ import 'package:storybook_dart_generator/src/story_info.dart';
 MetaInfo _resolveMeta(Element element, ConstantReader annotation) {
   final firstSupertype = (element as ClassElement).allSupertypes[0];
   final className = firstSupertype.typeArguments.first.getDisplayString(
+    // ignore: deprecated_member_use
     withNullability: false,
   );
   return MetaInfo(
