@@ -2,10 +2,13 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:storybook_dart/storybook_dart.dart';
 
-class StorybookPreviewer extends StatelessWidget {
-  const StorybookPreviewer({super.key});
+class StorybookDefaultPreviewer extends StatelessWidget {
+  const StorybookDefaultPreviewer(
+    this.config, {
+    super.key,
+  });
 
-  StorybookConfig get config => throw UnimplementedError();
+  final StorybookConfig config;
 
   ThemeData get theme {
     return ThemeData(

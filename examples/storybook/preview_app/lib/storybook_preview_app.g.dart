@@ -6,7 +6,6 @@ part of 'storybook_preview_app.dart';
 // StorybookPreviewerGenerator
 // **************************************************************************
 
-mixin _$StorybookPreviewApp on StorybookPreviewer {
-  @override
-  StorybookConfig get config => storybookConfig;
+mixin _$StorybookPreviewApp {
+  StorybookConfig get storybookConfig => $generatedStorybookConfig;
 }

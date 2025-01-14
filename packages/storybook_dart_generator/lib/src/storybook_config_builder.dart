@@ -53,7 +53,7 @@ class StorybookConfigBuilder extends Builder {
 ${_buildImports(sortedStories)}
 import 'package:storybook_dart/storybook_dart.dart';
 
-final StorybookConfig storybookConfig = StorybookConfig(
+final StorybookConfig \$generatedStorybookConfig = StorybookConfig(
   stories: [
 ${_buildStories(sortedStories)}
   ],

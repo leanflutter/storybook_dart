@@ -1,6 +1,6 @@
 name: storybook_dart_annotation
 description: storybook_dart_annotation
-version: 0.0.3
+version: 0.1.0
 homepage: https://github.com/leanflutter/storybook_dart/tree/main/packages/storybook_dart_annotation
 
 environment:

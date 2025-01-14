@@ -1,3 +1,7 @@
+## 0.1.0
+
+* chore: Change StorybookPreviewer to StorybookDefaultPreviewer
+
 ## 0.0.3
 
 * chore: Bump flutter version to 3.24.0

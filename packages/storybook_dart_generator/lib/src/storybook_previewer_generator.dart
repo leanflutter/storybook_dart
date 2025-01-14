@@ -17,9 +17,8 @@ class StorybookPreviewerGenerator
     final previewerInfo = resolveStorybookPreviewerInfo(element, annotation);
 
     return '''
-mixin _\$${previewerInfo.className} on StorybookPreviewer {
-  @override
-  StorybookConfig get config => storybookConfig;
+mixin _\$${previewerInfo.className} {
+  StorybookConfig get storybookConfig => \$generatedStorybookConfig;
 }
 ''';
   }

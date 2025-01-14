@@ -1,6 +1,6 @@
 name: storybook_dart
 description: storybook_dart
-version: 0.0.3
+version: 0.1.0
 homepage: https://github.com/leanflutter/storybook_dart/tree/main/packages/storybook_dart
 
 environment:
@@ -14,4 +14,4 @@ dependencies:
   flutter_test:
     sdk: flutter
   mostly_reasonable_lints: ^0.1.2
-  storybook_dart_annotation: ^0.0.3
+  storybook_dart_annotation: ^0.1.0
